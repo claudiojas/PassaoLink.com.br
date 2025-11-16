@@ -1,4 +1,4 @@
-import { ExternalLink, Star, Zap } from "lucide-react";
+import { ExternalLink, Zap } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,7 @@ interface ProductCardProps {
   platform: string;
   link: string;
   featured?: boolean;
+  onImageClick: () => void;
 }
 
 export function ProductCard({
@@ -18,11 +19,15 @@ export function ProductCard({
   platform,
   link,
   featured = false,
+  onImageClick,
 }: ProductCardProps) {
   return (
     <Card className={`group overflow-hidden transition-all duration-300 hover:shadow-card-hover ${featured ? 'border-primary border-2' : ''}`}>
       <CardContent className="p-0">
-        <div className="relative aspect-square overflow-hidden bg-muted">
+        <div
+          className="relative aspect-square overflow-hidden bg-muted cursor-pointer"
+          onClick={onImageClick}
+        >
           <img
             src={image}
             alt={title}

@@ -7,6 +7,7 @@ import { CategoryFilter } from "@/components/CategoryFilter";
 import { Skeleton } from "@/components/ui/skeleton";
 import api from "@/services/api";
 import { Product } from "@/types/Product";
+import { ProductModal } from "@/components/ProductModal";
 
 const fetchProducts = async (): Promise<Product[]> => {
   const { data } = await api.get("/products");
@@ -16,6 +17,7 @@ const fetchProducts = async (): Promise<Product[]> => {
 export default function Index() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("Todos");
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const { data: products = [], isLoading, isError } = useQuery<Product[]>({
     queryKey: ["products"],
@@ -46,6 +48,14 @@ export default function Index() {
       return matchesSearch && matchesCategory;
     });
   }, [products, searchQuery, activeCategory, featuredProduct]);
+
+  const handleImageClick = (product: Product) => {
+    setSelectedProduct(product);
+  };
+
+  const handleModalClose = () => {
+    setSelectedProduct(null);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -114,6 +124,7 @@ export default function Index() {
                   platform={product.plataforma}
                   link={product.link_afiliado_final}
                   featured={product.em_destaque}
+                  onImageClick={() => handleImageClick(product)}
                 />
               ))}
             </div>
@@ -127,6 +138,16 @@ export default function Index() {
           <p className="mt-2">Reviews honestos e links afiliados para suas melhores compras.</p>
         </div>
       </footer>
+
+      <ProductModal 
+        product={selectedProduct}
+        isOpen={!!selectedProduct}
+        onOpenChange={(isOpen) => {
+          if (!isOpen) {
+            handleModalClose();
+          }
+        }}
+      />
     </div>
   );
 }
