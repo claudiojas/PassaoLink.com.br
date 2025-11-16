@@ -7,6 +7,7 @@ import ProductTable from "@/components/ProductTable";
 import ProductForm from "@/components/ProductForm";
 import { toast } from "sonner";
 import api from "@/services/api";
+import logo from "@/assets/passaolink_not_bg.png";
 
 // Interface alinhada com o backend
 export interface Product {
@@ -104,9 +105,12 @@ const Dashboard = () => {
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl font-bold text-foreground">PassaoLink.com.br</h1>
-            <p className="text-sm text-muted-foreground">Painel Administrativo</p>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="PassaoLink.com.br Logo" className="h-10" />
+            <div>
+              <h1 className="text-2xl font-bold text-foreground">PassaoLink.com.br</h1>
+              <p className="text-sm text-muted-foreground">Painel Administrativo</p>
+            </div>
           </div>
           <Button variant="ghost" onClick={handleLogout}>
             <LogOut className="mr-2 h-4 w-4" />

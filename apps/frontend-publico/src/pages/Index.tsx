@@ -8,6 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import api from "@/services/api";
 import { Product } from "@/types/Product";
 import { ProductModal } from "@/components/ProductModal";
+import logo from "@/assets/passaolink_not_bg.png";
 
 const fetchProducts = async (): Promise<Product[]> => {
   const { data } = await api.get("/products");
@@ -58,7 +59,7 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="h-screen bg-background">
       <Header onSearch={setSearchQuery} />
 
       <main className="container max-w-6xl mx-auto px-4 py-8 space-y-12">
@@ -134,6 +135,9 @@ export default function Index() {
 
       <footer className="border-t mt-16 py-8">
         <div className="container max-w-6xl mx-auto px-4 text-center text-sm text-muted-foreground">
+          <div className="flex justify-center mb-4">
+            <img src={logo} alt="PassaoLink.com.br Logo" className="h-20" />
+          </div>
           <p>© 2025 PassaoLink.com.br. Todos os direitos reservados.</p>
           <p className="mt-2">Reviews honestos e links afiliados para suas melhores compras.</p>
         </div>
