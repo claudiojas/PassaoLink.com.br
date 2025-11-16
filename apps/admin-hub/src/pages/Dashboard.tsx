@@ -105,7 +105,7 @@ const Dashboard = () => {
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-foreground">Compra Esperta</h1>
+            <h1 className="text-2xl font-bold text-foreground">PassaoLink.com.br</h1>
             <p className="text-sm text-muted-foreground">Painel Administrativo</p>
           </div>
           <Button variant="ghost" onClick={handleLogout}>

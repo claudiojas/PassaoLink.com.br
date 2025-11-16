@@ -49,7 +49,7 @@ const Register = () => {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold">Criar Conta</CardTitle>
-          <CardDescription>Painel Administrativo - Compra Esperta</CardDescription>
+          <CardDescription>Painel Administrativo - PassaoLink.com.br</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleRegister} className="space-y-4">
@@ -58,7 +58,7 @@ const Register = () => {
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@compraesperta.com"
+                placeholder="admin@passaolink.com.br"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}

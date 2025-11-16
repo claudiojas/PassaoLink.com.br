@@ -1,6 +1,6 @@
 # Admin Hub
 
-Painel de administração para o Compra Certa.
+Painel de administração para o passaolink.com.br.
 
 ## Tecnologias
 
@@ -28,7 +28,7 @@ Antes de iniciar, você precisa configurar a variável de ambiente para a URL da
 Certifique-se de que a [API (`api-hub-link`)](../api-hub-link/README.md) esteja rodando.
 
 ```sh
-# 1. A partir da raiz do monorepo (ex: /compraCerta)
+# 1. A partir da raiz do monorepo (ex: /passaolink.com.br)
 # 2. Instale as dependências
 npm install
 
