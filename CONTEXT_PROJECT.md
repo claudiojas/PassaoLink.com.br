@@ -1,6 +1,6 @@
-# Documentação Técnica - Projeto Compra Certa
+# Documentação Técnica - Projeto PassaoLink.com.br
 
-Este documento serve como um guia técnico completo para o desenvolvimento do projeto Compra Certa. Ele detalha a arquitetura, tecnologias, configuração do ambiente e o estado atual do desenvolvimento.
+Este documento serve como um guia técnico completo para o desenvolvimento do projeto PassaoLink.com.br. Ele detalha a arquitetura, tecnologias, configuração do ambiente e o estado atual do desenvolvimento.
 
 ## 1. Status Atual do Projeto
 
@@ -65,7 +65,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento completo.
 1.  **Clone o Repositório:**
     ```bash
     git clone <URL_DO_SEU_REPOSITORIO>
-    cd compraCerta
+    cd passaolink.com.br
     ```
 
 2.  **Configure as Variáveis de Ambiente:**
@@ -99,13 +99,13 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento completo.
 1.  **Inicie o Banco de Dados:**
     ```bash
     # A partir da raiz do projeto
-    npm run docker:up --workspace=@compra-certa/api-hub-link
+    npm run docker:up --workspace=@passaolink.com.br/api-hub-link
     ```
 
 2.  **Execute a Migração do Banco de Dados (se for a primeira vez):**
     ```bash
     # A partir da raiz do projeto
-    npm run prisma:migrate --workspace=@compra-certa/api-hub-link
+    npm run prisma:migrate --workspace=@passaolink.com.br/api-hub-link
     ```
 
 3.  **Inicie todos os Serviços em Modo de Desenvolvimento:**

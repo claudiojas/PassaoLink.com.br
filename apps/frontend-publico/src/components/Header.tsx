@@ -12,7 +12,7 @@ export function Header({ onSearch }: HeaderProps) {
         <div className="flex flex-col items-center space-y-4">
           <div className="text-center">
             <h1 className="text-3xl md:text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-              Compra Esperta
+              PassaoLink.com.br
             </h1>
             <p className="text-sm md:text-base text-muted-foreground mt-1">
               Seu Guia de Custo-Benefício

@@ -123,7 +123,7 @@ export default function Index() {
 
       <footer className="border-t mt-16 py-8">
         <div className="container max-w-6xl mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2025 Compra Esperta. Todos os direitos reservados.</p>
+          <p>© 2025 PassaoLink.com.br. Todos os direitos reservados.</p>
           <p className="mt-2">Reviews honestos e links afiliados para suas melhores compras.</p>
         </div>
       </footer>

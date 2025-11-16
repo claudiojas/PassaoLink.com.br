@@ -1,6 +1,6 @@
-# Frontend Público
+# Frontend Público PassaoLink.com.br
 
-Interface pública para o Compra Certa.
+Interface pública para o PassaoLink.com.br.
 
 ## Tecnologias
 
@@ -17,7 +17,7 @@ Interface pública para o Compra Certa.
 git clone <URL_DO_SEU_REPO>
 
 # 2. Navegue até a pasta do projeto
-cd compraCerta
+cd passaolink.com.br
 
 # 3. Instale as dependências
 npm install
