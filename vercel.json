@@ -1,49 +1,5 @@
 {
   "buildCommand": "turbo build",
   "installCommand": "npm install",
-  "outputDirectory": "dist",
-  "framework": null,
-  "git": {
-    "deploymentEnabled": true
-  },
-  "projects": [
-    {
-      "name": "frontend-publico",
-      "root": "apps/frontend-publico",
-      "buildCommand": "npm run build",
-      "outputDirectory": "dist",
-      "env": {
-        "VITE_API_URL": "@vercel-api-url"
-      }
-    },
-    {
-      "name": "admin-hub",
-      "root": "apps/admin-hub",
-      "buildCommand": "npm run build",
-      "outputDirectory": "dist",
-      "env": {
-        "VITE_API_URL": "@vercel-api-url"
-      }
-    },
-    {
-      "name": "api-hub-link",
-      "root": "apps/api-hub-link",
-      "buildCommand": "npm run build",
-      "outputDirectory": "dist",
-      "functions": {
-        "api/**/*.ts": {
-          "runtime": "nodejs20.x"
-        }
-      },
-      "env": {
-        "DATABASE_URL": "@database-url"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/apps/api-hub-link/api"
-    }
-  ]
+  "outputDirectory": "dist"
 }
