@@ -26,7 +26,7 @@ export function Header({ onSearch }: HeaderProps) {
             <Input
               type="search"
               placeholder="Buscar produtos..."
-              className="pl-10 ml-7"
+              className="pl-10"
               onChange={(e) => onSearch(e.target.value)}
               aria-label="Buscar produtos"
             />
