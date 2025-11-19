@@ -26,15 +26,19 @@ export default function Index() {
   });
 
   const featuredProduct = useMemo(() => {
+    if (!Array.isArray(products)) return undefined;
     return products.find(p => p.em_destaque);
   }, [products]);
 
   const categories = useMemo(() => {
+    if (!Array.isArray(products)) return ["Todos"];
     const allCategories = products.map(p => p.categoria);
     return ["Todos", ...Array.from(new Set(allCategories))];
   }, [products]);
 
   const filteredProducts = useMemo(() => {
+    if (!Array.isArray(products)) return [];
+
     // Exclude the featured product from the main list if it exists
     const nonFeatured = featuredProduct 
       ? products.filter(p => p.id !== featuredProduct.id)
